@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 class BoilerplateTest {
 
   @Test
-  void addition() {
+  void helloWorld() {
     assertEquals(Boilerplate.getHelloWorld(), "Hello, World!");
   }
 
