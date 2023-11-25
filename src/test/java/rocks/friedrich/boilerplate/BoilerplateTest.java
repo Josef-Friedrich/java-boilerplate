@@ -4,11 +4,14 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
-class BoilerplateTest {
+class BoilerplateTest
+{
 
-  @Test
-  void helloWorld() {
-    assertEquals(Boilerplate.getHelloWorld(), "Hello, World!");
-  }
+    @Test
+    void helloWorld()
+    {
+
+        assertEquals(Boilerplate.getHelloWorld(), "Hello, World!");
+    }
 
 }

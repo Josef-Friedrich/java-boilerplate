@@ -36,4 +36,7 @@ package:
 test:
 	mvn test
 
+format:
+	mvn formatter:format
+
 .PHONY: dependency

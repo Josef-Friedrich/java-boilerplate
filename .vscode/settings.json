@@ -1,0 +1,8 @@
+{
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "java.format.settings.url": "eclipse-formatter.xml",
+  // number of spaces for a tab
+  "editor.tabSize": 4,
+  // insert spaces when pressing tab
+  "editor.insertSpaces": true
+}
