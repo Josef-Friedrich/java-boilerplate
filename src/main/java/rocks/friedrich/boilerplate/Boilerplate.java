@@ -5,7 +5,6 @@ package rocks.friedrich.boilerplate;
  */
 public class Boilerplate
 {
-
     /**
      * Return the string “Hello, World!”.
      *
@@ -13,8 +12,6 @@ public class Boilerplate
      */
     public static String getHelloWorld()
     {
-
         return "Hello, World!";
     }
-
 }
