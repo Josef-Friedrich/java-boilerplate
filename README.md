@@ -35,9 +35,7 @@ It is best to make or edit the XML formatter files in Eclipse: Window > Preferen
 ```json
 {
   "java.format.settings.url": ".eclipse-formatter/school.xml",
-    // number of spaces for a tab
   "editor.tabSize": 4,
-  // insert spaces when pressing tab
   "editor.insertSpaces": true
 }
 ```
