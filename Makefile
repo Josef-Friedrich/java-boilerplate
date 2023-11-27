@@ -13,18 +13,18 @@ VERSION = 0.0.1
 mvn_install_home:
 	mvn install:install-file \
 		-Dfile=$(JAR) \
+		-Dsources=$(SOURCES) \
 		-DgroupId=$(GROUP_ID) \
 		-DartifactId=$(ARTIFACT_ID) \
-		-Dsources=$(SOURCES) \
 		-Dversion=$(VERSION) \
 		-Dpackaging=jar
 
 mvn_install_local_repo:
 	mvn install:install-file \
 		-Dfile=$(JAR) \
+		-Dsources=$(SOURCES) \
 		-DgroupId=$(GROUP_ID) \
 		-DartifactId=$(ARTIFACT_ID) \
-		-Dsources=$(SOURCES) \
 		-Dversion=$(VERSION) \
 		-Dpackaging=jar \
 		-DlocalRepositoryPath=lib \
