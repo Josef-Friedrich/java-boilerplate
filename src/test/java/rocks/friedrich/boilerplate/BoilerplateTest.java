@@ -9,6 +9,6 @@ class BoilerplateTest
     @Test
     void helloWorld()
     {
-        assertEquals(Boilerplate.getHelloWorld(), "Hello, World!");
+        assertEquals(Boilerplate.getHelloWorld(), "Hello, World! Hello, World! Hello, World! ");
     }
 }
