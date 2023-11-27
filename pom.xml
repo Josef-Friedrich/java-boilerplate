@@ -16,6 +16,13 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
+  <repositories>
+    <repository>
+      <id>project-repository</id>
+      <url>file://${project.basedir}/repository</url>
+    </repository>
+  </repositories>
+
   <dependencies>
     <dependency>
       <groupId>org.junit.jupiter</groupId>
@@ -30,20 +37,12 @@
     </dependency>
   </dependencies>
 
-  <repositories>
-    <repository>
-      <id>project-repository</id>
-      <url>file://${project.basedir}/repository</url>
-    </repository>
-  </repositories>
-
   <distributionManagement>
     <snapshotRepository>
       <id>ossrh</id>
       <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
     </snapshotRepository>
   </distributionManagement>
-
 
   <build>
     <plugins>

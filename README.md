@@ -75,3 +75,37 @@ mvn install:install-file \
   <version>3.14.0</version>
 </dependency>
 ```
+
+## Remove unused imports 
+
+Not working?
+
+```xml
+<build>
+  <pluginManagement>
+    <plugin>
+        <groupId>com.xenoamess</groupId>
+        <artifactId>remove-unused-imports-maven-plugin</artifactId>
+        <version>0.0.6</version>
+        <executions>
+            <execution>
+                <goals>
+                    <goal>process</goal>
+                </goals>
+                <configuration>
+                    <ruleNames>
+                        <ruleName>UnusedImports</ruleName>
+                        <ruleName>DuplicateImports</ruleName>
+                        <ruleName>UnnecessaryReturn</ruleName>
+                        <ruleName>ImportFromSamePackage</ruleName>
+                        <ruleName>DontImportJavaLang</ruleName>
+                    </ruleNames>
+                    <pmdXmlPath>${basedir}/target/pmd.xml</pmdXmlPath>
+                    <breakBuildIfHaveViolationRemains>false</breakBuildIfHaveViolationRemains>
+                </configuration>
+            </execution>
+        </executions>
+    </plugin>        
+  </pluginManagement>
+</build>
+```

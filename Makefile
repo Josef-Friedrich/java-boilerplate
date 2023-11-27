@@ -34,9 +34,10 @@ package:
 	mvn package
 
 test:
+	mvn clean
 	mvn test
 
 format:
 	mvn formatter:format
 
-.PHONY: dependency
+.PHONY: mvn_install_home mvn_install_local_repo package test format
