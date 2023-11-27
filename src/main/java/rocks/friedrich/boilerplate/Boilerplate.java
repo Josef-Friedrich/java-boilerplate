@@ -1,5 +1,7 @@
 package rocks.friedrich.boilerplate;
 
+import org.apache.commons.lang3.StringUtils;
+
 /**
  * A boilerplate class.
  */
@@ -12,6 +14,6 @@ public class Boilerplate
      */
     public static String getHelloWorld()
     {
-        return "Hello, World!";
+        return StringUtils.repeat("Hello, World! ", 3);
     }
 }

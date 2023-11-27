@@ -39,3 +39,39 @@ It is best to make or edit the XML formatter files in Eclipse: Window > Preferen
   "editor.insertSpaces": true
 }
 ```
+
+## Maven (JAR files) repository inside a project
+
+```xml
+wget -O commons-lang3-sources.jar https://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.14.0/commons-lang3-3.14.0-sources.jar
+wget -O commons-lang3.jar https://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.14.0/commons-lang3-3.14.0.jar
+
+mvn install:install-file \
+    -Dfile=commons-lang3.jar \
+    -Dsources=commons-lang3-sources.jar \
+    -DgroupId=org.apache.commons \
+    -DartifactId=commons-lang3 \
+    -Dversion=3.14.0 \
+    -Dpackaging=jar \
+    -DlocalRepositoryPath=repository \
+    -DcreateChecksum=true
+```
+
+`pom.xml`
+
+```xml
+<repositories>
+    <repository>
+        <id>project-repository</id>
+        <url>file://${project.basedir}/repository</url>
+    </repository>
+</repositories>
+```
+
+```xml
+<dependency>
+  <groupId>org.apache.commons</groupId>
+  <artifactId>commons-lang3</artifactId>
+  <version>3.14.0</version>
+</dependency>
+```

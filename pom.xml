@@ -23,13 +23,17 @@
       <version>5.5.2</version>
       <scope>test</scope>
     </dependency>
-
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>3.14.0</version>
+    </dependency>
   </dependencies>
 
   <repositories>
     <repository>
-      <id>this-local-git-repo</id>
-      <url>file://${project.basedir}/lib</url>
+      <id>project-repository</id>
+      <url>file://${project.basedir}/repository</url>
     </repository>
   </repositories>
 
