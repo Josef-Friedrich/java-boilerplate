@@ -80,6 +80,23 @@ mvn install:install-file \
 
 Not working?
 
+mvn site
+
+
+```xml
+<reporting>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-pmd-plugin</artifactId>
+            <version>3.21.0</version>
+        </plugin>
+    </plugins>
+</reporting>
+```
+
+mvn com.xenoamess:remove-unused-imports-maven-plugin:0.0.6:process
+
 ```xml
 <build>
   <pluginManagement>
