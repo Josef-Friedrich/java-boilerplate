@@ -76,7 +76,7 @@ mvn install:install-file \
 </dependency>
 ```
 
-## Remove unused imports 
+## Remove unused imports
 
 Not working?
 
@@ -122,7 +122,17 @@ mvn com.xenoamess:remove-unused-imports-maven-plugin:0.0.6:process
                 </configuration>
             </execution>
         </executions>
-    </plugin>        
+    </plugin>
   </pluginManagement>
 </build>
 ```
+
+## Reference JAR lib in VScode
+
+```json
+{
+    "java.project.referencedLibraries": [
+        "+libs/**/*.jar"
+    ]
+}
+``````
