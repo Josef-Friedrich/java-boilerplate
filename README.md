@@ -2,6 +2,16 @@
 
 Boilerplate code snippets for my java projects
 
+## Maven Standard Directory Layout
+
+`src/main/java` Application/Library sources<br>
+`src/main/resources` Application/Library resources<br>
+`src/test/java` Test sources<br>
+`src/test/resources` Test resources<br>
+
+<small>
+[Source](https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html)</small>
+
 ## format
 
 `make format` or `mvn formatter:format`
