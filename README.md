@@ -16,17 +16,51 @@ Boilerplate code snippets for my java projects
 ## pom.xml
 
 ```xml
-<project>
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.mycompany.app</groupId>
-  <artifactId>my-app</artifactId>
-  <version>1</version>
+  <groupId>rocks.friedrich.boilerplate</groupId>
+  <artifactId>boilerplate</artifactId>
+  <version>0.1.0</version>
+
+  <properties>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
 </project>
 ```
 
 <small>
 [Source](https://maven.apache.org/guides/introduction/introduction-to-the-pom.html)</small>
+
+
+## naming conventions on groupId, artifactId, and version
+
+### groupId
+
+uniquely identifies your project across all projects. A group ID should follow Java's package name rules. This means it starts with a reversed domain name you control. For example,
+
+    org.apache.maven, org.apache.commons
+
+## artifactId
+
+is the __name of the jar__ without version. If you created it, then you can
+choose whatever name you want with __lowercase letters__ and no strange symbols.
+
+    eg. maven, commons-math
+
+## version
+
+if you distribute it, then you can choose any typical version with numbers and dots (1.0, 1.1, 1.0.1, ...). For example,
+
+    2.0, 2.0.1, 1.3.1
+
+<small>
+[Source](https://maven.apache.org/guides/mini/guide-naming-conventions.html)</small>
 
 ## format
 
