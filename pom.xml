@@ -56,7 +56,6 @@
           </includes>
         </configuration>
       </plugin>
-
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-source-plugin</artifactId>
@@ -121,6 +120,25 @@
             </configuration>
           </execution>
         </executions>
+      </plugin>
+      <!--
+        http://www.mojohaus.org/exec-maven-plugin/usage.html
+        mvn exec:java
+      -->
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>3.2.0</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>java</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <mainClass>rocks.friedrich.boilerplate.Boilerplate</mainClass>
+        </configuration>
       </plugin>
       <plugin>
         <groupId>org.sonatype.plugins</groupId>

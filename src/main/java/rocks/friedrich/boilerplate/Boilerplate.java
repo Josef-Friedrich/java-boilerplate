@@ -16,4 +16,8 @@ public class Boilerplate
     {
         return StringUtils.repeat("Hello, World! ", 3);
     }
+
+    public static void main(String[] args) {
+        System.out.println(getHelloWorld());
+    }
 }
