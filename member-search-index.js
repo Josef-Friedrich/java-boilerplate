@@ -1,1 +1,1 @@
-memberSearchIndex = [{"p":"rocks.friedrich.boilerplate","c":"Boilerplate","l":"Boilerplate()","u":"%3Cinit%3E()"},{"p":"rocks.friedrich.boilerplate","c":"Boilerplate","l":"getHelloWorld()"}];updateSearchResults();
+memberSearchIndex = [{"p":"rocks.friedrich.boilerplate","c":"Boilerplate","l":"Boilerplate()","u":"%3Cinit%3E()"},{"p":"rocks.friedrich.boilerplate","c":"Boilerplate","l":"getHelloWorld()"},{"p":"rocks.friedrich.boilerplate","c":"Boilerplate","l":"main(String[])","u":"main(java.lang.String[])"}];updateSearchResults();
