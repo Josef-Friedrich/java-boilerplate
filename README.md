@@ -7,10 +7,26 @@ Boilerplate code snippets for my java projects
 `src/main/java` Application/Library sources<br>
 `src/main/resources` Application/Library resources<br>
 `src/test/java` Test sources<br>
-`src/test/resources` Test resources<br>
+`src/test/resources` Test resources
 
 <small>
 [Source](https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html)</small>
+
+
+## pom.xml
+
+```xml
+<project>
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.mycompany.app</groupId>
+  <artifactId>my-app</artifactId>
+  <version>1</version>
+</project>
+```
+
+<small>
+[Source](https://maven.apache.org/guides/introduction/introduction-to-the-pom.html)</small>
 
 ## format
 
