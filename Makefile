@@ -9,6 +9,9 @@ GROUP_ID = groupId
 ARTIFACT_ID = artifactID
 VERSION = 0.0.1
 
+install:
+	mvn install
+
 # $HOME/.m2/repository/
 mvn_install_home:
 	mvn install:install-file \
@@ -40,4 +43,4 @@ test:
 format:
 	mvn formatter:format
 
-.PHONY: mvn_install_home mvn_install_local_repo package test format
+.PHONY: install mvn_install_home mvn_install_local_repo package test format
