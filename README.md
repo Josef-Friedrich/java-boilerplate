@@ -12,7 +12,6 @@ Boilerplate code snippets for my java projects
 <small>
 [Source](https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html)</small>
 
-
 ## pom.xml
 
 ```xml
@@ -36,7 +35,6 @@ Boilerplate code snippets for my java projects
 
 <small>
 [Source](https://maven.apache.org/guides/introduction/introduction-to-the-pom.html)</small>
-
 
 ## naming conventions on groupId, artifactId, and version
 
@@ -91,7 +89,6 @@ It is best to make or edit the XML formatter files in Eclipse: Window > Preferen
 
 `.vscode/settings.json`
 
-
 ```json
 {
   "java.format.settings.url": ".eclipse-formatter/school.xml",
@@ -141,7 +138,6 @@ mvn install:install-file \
 Not working?
 
 mvn site
-
 
 ```xml
 <reporting>
@@ -195,4 +191,10 @@ mvn com.xenoamess:remove-unused-imports-maven-plugin:0.0.6:process
         "+libs/**/*.jar"
     ]
 }
-``````
+```
+
+## Publish to Maven Central
+
+https://central.sonatype.org/publish-ea/publish-ea-guide/#introduction
+
+https://github.com/simpligility/ossrh-demo
