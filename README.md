@@ -198,3 +198,68 @@ mvn com.xenoamess:remove-unused-imports-maven-plugin:0.0.6:process
 https://central.sonatype.org/publish-ea/publish-ea-guide/#introduction
 
 https://github.com/simpligility/ossrh-demo
+
+`~/.m2/settings.xml`
+
+```xml
+<settings>
+  <servers>
+    <server>
+      <!-- https://central.sonatype.com/account -->
+      <id>ossrh</id>
+      <username>xxx</username>
+      <password>xxx</password>
+    </server>
+  </servers>
+  <profiles>
+    <profile>
+      <id>ossrh</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <properties>
+        <gpg.executable>gpg2</gpg.executable>
+        <gpg.passphrase>xxx</gpg.passphrase>
+      </properties>
+    </profile>
+  </profiles>
+</settings>
+```
+
+`pom.xml`
+
+```xml
+<project>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>3.2.4</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.sonatype.central</groupId>
+                <artifactId>central-publishing-maven-plugin</artifactId>
+                <version>0.4.0</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <publishingServerId>central</publishingServerId>
+                    <tokenAuth>true</tokenAuth>
+                    <autoPublish>true</autoPublish>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
+```
+
+`mvn deploy`
