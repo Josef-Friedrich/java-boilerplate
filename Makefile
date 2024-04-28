@@ -36,6 +36,10 @@ mvn_install_local_repo:
 package:
 	mvn package
 
+doc:
+	mvn javadoc:javadoc
+	xdg-open target/site/apidocs/index.html
+
 test:
 	mvn clean
 	mvn test
