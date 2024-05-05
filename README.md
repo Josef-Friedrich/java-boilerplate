@@ -57,8 +57,7 @@ if you distribute it, then you can choose any typical version with numbers and d
 
     2.0, 2.0.1, 1.3.1
 
-<small>
-[Source](https://maven.apache.org/guides/mini/guide-naming-conventions.html)</small>
+<small>[Source](https://maven.apache.org/guides/mini/guide-naming-conventions.html)</small>
 
 ## format
 
