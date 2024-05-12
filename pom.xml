@@ -8,6 +8,7 @@
   <groupId>rocks.friedrich.boilerplate</groupId>
   <artifactId>boilerplate</artifactId>
   <version>0.1.0</version>
+  <packaging>jar</packaging>
 
   <properties>
     <!-- BlueJ doesn’t support 18 -->
@@ -56,6 +57,8 @@
   </distributionManagement>
 
   <build>
+    <!-- Default is ${artifactId}-${version}, to get jar files without the verson -->
+    <finalName>${project.artifactId}</finalName>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -94,11 +97,17 @@
         </executions>
       </plugin>
       <!-- https://maven.apache.org/plugins/maven-assembly-plugin/usage.html -->
+      <!-- https://maven.apache.org/plugins/maven-assembly-plugin/single-mojo.html -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-assembly-plugin</artifactId>
         <version>3.7.1</version>
         <configuration>
+          <!-- Set to false to exclude the assembly id from the assembly final name, and
+                    to create the resultant assembly artifacts without classifier. As such, an
+                    assembly artifact having the same format as the packaging of the current Maven
+                    project will replace the file for this main project artifact. -->
+          <appendAssemblyId>false</appendAssemblyId>
           <descriptorRefs>
             <descriptorRef>jar-with-dependencies</descriptorRef>
           </descriptorRefs>
