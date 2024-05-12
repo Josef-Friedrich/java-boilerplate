@@ -9,7 +9,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    steps:
       # https://github.com/actions/checkout
       - name: Checkout the repository
         uses: actions/checkout@v4
