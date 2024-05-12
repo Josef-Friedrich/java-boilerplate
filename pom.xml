@@ -57,8 +57,8 @@
   </distributionManagement>
 
   <build>
-    <!-- Default is ${artifactId}-${version}, to get jar files without the verson -->
-    <finalName>${project.artifactId}</finalName>
+    <!-- Default is ${artifactId}-${version}, to get jar files without the version use ${artifactId} -->
+    <finalName>${project.artifactId}-${version}</finalName>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
