@@ -1,0 +1,11 @@
+{
+  "German translation": {
+    "prefix": ["de", "deutsch"],
+    "body": [" | DE: <i>$1</i>"],
+    "description": "Inserts a German translation of the given text"
+  },
+  "Link <a href=\"\"></a>": {
+    "prefix": ["a"],
+    "body": ["<a href=\"$1\">$2</a>"]
+  }
+}
