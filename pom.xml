@@ -71,6 +71,19 @@
           </includes>
         </configuration>
       </plugin>
+      <!-- https://maven.apache.org/plugins/maven-jar-plugin/jar-mojo.html -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <configuration>
+          <archive>
+            <manifest>
+              <addClasspath>true</addClasspath>
+              <mainClass>rocks.friedrich.boilerplate.Boilerplate</mainClass>
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-source-plugin</artifactId>
