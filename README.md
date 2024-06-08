@@ -21,7 +21,7 @@ Boilerplate code snippets for my java projects
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>rocks.friedrich.boilerplate</groupId>
+  <groupId>rocks.friedrich</groupId>
   <artifactId>boilerplate</artifactId>
   <version>0.1.0</version>
 
@@ -40,9 +40,11 @@ Boilerplate code snippets for my java projects
 
 ### groupId
 
-uniquely identifies your project across all projects. A group ID should follow Java's package name rules. This means it starts with a reversed domain name you control. For example,
+uniquely identifies your project across all projects. A group ID should follow
+Java's package name rules. This means it starts with a reversed domain name you
+control. For example
 
-    org.apache.maven, org.apache.commons
+    org.apache.maven, org.apache.commons, de.pirckheimer-gymnasium
 
 ## artifactId
 

@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <!-- https://maven.apache.org/guides/mini/guide-naming-conventions.html -->
-  <groupId>rocks.friedrich.boilerplate</groupId>
+  <groupId>rocks.friedrich</groupId>
   <artifactId>boilerplate</artifactId>
   <version>0.1.0</version>
   <packaging>jar</packaging>
