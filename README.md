@@ -264,3 +264,10 @@ https://github.com/simpligility/ossrh-demo
 ```
 
 `mvn deploy`
+
+
+## javadoc
+
+Multiline code snippets
+
+https://reflectoring.io/howto-format-code-snippets-in-javadoc/
