@@ -220,7 +220,7 @@ https://github.com/simpligility/ossrh-demo
       </activation>
       <properties>
         <gpg.executable>gpg2</gpg.executable>
-        <gpg.passphrase>xxx</gpg.passphrase>
+        <!-- <gpg.passphrase>xxx</gpg.passphrase> -->
       </properties>
     </profile>
   </profiles>
@@ -250,7 +250,7 @@ https://github.com/simpligility/ossrh-demo
             <plugin>
                 <groupId>org.sonatype.central</groupId>
                 <artifactId>central-publishing-maven-plugin</artifactId>
-                <version>0.4.0</version>
+                <version>0.5.0</version>
                 <extensions>true</extensions>
                 <configuration>
                     <publishingServerId>central</publishingServerId>
@@ -264,7 +264,6 @@ https://github.com/simpligility/ossrh-demo
 ```
 
 `mvn deploy`
-
 
 ## javadoc
 
