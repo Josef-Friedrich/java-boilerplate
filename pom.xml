@@ -61,20 +61,23 @@
         version use ${project.artifactId} -->
     <finalName>${project.artifactId}-${project.version}</finalName>
     <plugins>
+      <!-- https://maven.apache.org/surefire/maven-surefire-plugin/ -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
-        <version>3.2.5</version>
+        <version>3.3.1</version>
         <configuration>
           <includes>
             <include>**/*.java</include>
           </includes>
         </configuration>
       </plugin>
+      <!-- https://maven.apache.org/plugins/maven-jar-plugin/ -->
       <!-- https://maven.apache.org/plugins/maven-jar-plugin/jar-mojo.html -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jar-plugin</artifactId>
+        <version>3.4.2</version>
         <configuration>
           <archive>
             <manifest>
@@ -85,9 +88,10 @@
         </configuration>
       </plugin>
       <plugin>
+        <!-- https://maven.apache.org/plugins/maven-source-plugin/ -->
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-source-plugin</artifactId>
-        <version>3.3.0</version>
+        <version>3.3.1</version>
         <executions>
           <execution>
             <id>attach-sources</id>
@@ -97,14 +101,32 @@
           </execution>
         </executions>
       </plugin>
+      <!-- https://maven.apache.org/plugins/maven-javadoc-plugin/ -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-javadoc-plugin</artifactId>
-        <version>3.6.3</version>
+        <version>3.8.0</version>
         <configuration>
           <!-- to disable the "missing" warnings -->
           <doclint>all,-missing</doclint>
+
+          <!--
+                    https://maven.apache.org/plugins/maven-javadoc-plugin/examples/links-configuration.html -->
+          <links>
+            <link>https://javadoc.io/doc/de.pirckheimer-gymnasium/engine-pi/latest</link>
+          </links>
+
+          <!--
+                    https://maven.apache.org/plugins/maven-javadoc-plugin/examples/stylesheet-configuration.html -->
+          <stylesheetfile>javadoc-stylesheet.css</stylesheetfile>
         </configuration>
+        <dependencies>
+          <dependency>
+            <groupId>de.pirckheimer-gymnasium</groupId>
+            <artifactId>engine-pi</artifactId>
+            <version>0.28.0</version>
+          </dependency>
+        </dependencies>
         <executions>
           <execution>
             <id>attach-javadocs</id>
@@ -114,6 +136,7 @@
           </execution>
         </executions>
       </plugin>
+      <!-- https://maven.apache.org/plugins/maven-assembly-plugin/ -->
       <!-- https://maven.apache.org/plugins/maven-assembly-plugin/usage.html -->
       <!-- https://maven.apache.org/plugins/maven-assembly-plugin/single-mojo.html -->
       <plugin>
@@ -187,19 +210,21 @@
           <mainClass>rocks.friedrich.boilerplate.Boilerplate</mainClass>
         </configuration>
       </plugin>
+      <!-- https://central.sonatype.org/publish/publish-portal-maven/ -->
       <plugin>
-        <groupId>org.sonatype.plugins</groupId>
-        <artifactId>nexus-staging-maven-plugin</artifactId>
-        <version>1.6.13</version>
+        <groupId>org.sonatype.central</groupId>
+        <artifactId>central-publishing-maven-plugin</artifactId>
+        <version>0.5.0</version>
         <extensions>true</extensions>
         <configuration>
-          <serverId>ossrh</serverId>
-          <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
-          <autoReleaseAfterClose>true</autoReleaseAfterClose>
+          <!-- see ~/.m2/settings.xml -->
+          <publishingServerId>central</publishingServerId>
+          <tokenAuth>true</tokenAuth>
+          <autoPublish>true</autoPublish>
         </configuration>
       </plugin>
 
-      <!-- https://code.revelc.net/formatter-maven-plugin/usage.html -->
+      <!-- https://code.revelc.net/formatters-maven-plugin/usage.html -->
       <plugin>
         <groupId>net.revelc.code.formatter</groupId>
         <artifactId>formatter-maven-plugin</artifactId>
