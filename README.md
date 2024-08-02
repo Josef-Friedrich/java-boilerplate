@@ -230,36 +230,57 @@ https://github.com/simpligility/ossrh-demo
 `pom.xml`
 
 ```xml
+<distributionManagement>
+    <snapshotRepository>
+        <id>ossrh</id>
+        <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+    </snapshotRepository>
+    <repository>
+        <id>ossrh</id>
+        <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
+</distributionManagement>
+```
+
+```xml
 <project>
     <build>
         <plugins>
+            <!-- https://maven.apache.org/plugins/maven-gpg-plugin/usage.html -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-gpg-plugin</artifactId>
                 <version>3.2.4</version>
                 <executions>
-                    <execution>
-                        <id>sign-artifacts</id>
-                        <phase>verify</phase>
-                        <goals>
-                            <goal>sign</goal>
-                        </goals>
-                    </execution>
+                <execution>
+                    <id>sign-artifacts</id>
+                    <phase>verify</phase>
+                    <goals>
+                    <goal>sign</goal>
+                    </goals>
+                    <configuration>
+                    <!-- This is necessary for gpg to not try to use the pinentry programs -->
+                    <gpgArguments>
+                        <arg>--pinentry-mode</arg>
+                        <arg>loopback</arg>
+                    </gpgArguments>
+                    </configuration>
+                </execution>
                 </executions>
             </plugin>
-                <!-- https://central.sonatype.org/publish/publish-portal-maven/ -->
-                <plugin>
-                    <groupId>org.sonatype.central</groupId>
-                    <artifactId>central-publishing-maven-plugin</artifactId>
-                    <version>0.5.0</version>
-                    <extensions>true</extensions>
-                    <configuration>
-                        <!-- see ~/.m2/settings.xml -->
-                        <publishingServerId>central</publishingServerId>
-                        <tokenAuth>true</tokenAuth>
-                        <autoPublish>true</autoPublish>
-                    </configuration>
-                </plugin>
+            <!-- https://central.sonatype.org/publish/publish-portal-maven/ -->
+            <plugin>
+                <groupId>org.sonatype.central</groupId>
+                <artifactId>central-publishing-maven-plugin</artifactId>
+                <version>0.5.0</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <!-- see ~/.m2/settings.xml -->
+                    <publishingServerId>central</publishingServerId>
+                    <tokenAuth>true</tokenAuth>
+                    <autoPublish>true</autoPublish>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 </project>
