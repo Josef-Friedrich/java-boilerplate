@@ -272,3 +272,25 @@ https://github.com/simpligility/ossrh-demo
 Multiline code snippets
 
 https://reflectoring.io/howto-format-code-snippets-in-javadoc/
+
+## versioning
+
+```xml
+<project>
+    <build>
+        <plugins>
+           <!-- https://www.mojohaus.org/versions/versions-maven-plugin/-->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>versions-maven-plugin</artifactId>
+                <version>2.17.1</version>
+        </plugins>
+    </build>
+</project>
+```
+
+`mvn versions:set`
+
+`mvn versions:set -DnewVersion=1.0.1-SNAPSHOT`
+
+`mvn versions:commit`
