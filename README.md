@@ -294,3 +294,36 @@ https://reflectoring.io/howto-format-code-snippets-in-javadoc/
 `mvn versions:set -DnewVersion=1.0.1-SNAPSHOT`
 
 `mvn versions:commit`
+
+## junit
+
+```xml
+<dependencyManagement>
+    <dependencies>
+        <dependency>
+        <groupId>org.junit</groupId>
+        <artifactId>junit-bom</artifactId>
+        <version>5.10.3</version>
+        <type>pom</type>
+        <scope>import</scope>
+        </dependency>
+    </dependencies>
+</dependencyManagement>
+
+<dependencies>
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter</artifactId>
+        <scope>test</scope>
+    </dependency>
+</dependencies>
+
+<build>
+    <plugins>
+        <plugin>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.3.1</version>
+        </plugin>
+    </plugins>
+</build>
+```
