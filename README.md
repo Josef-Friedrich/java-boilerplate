@@ -230,19 +230,6 @@ https://github.com/simpligility/ossrh-demo
 `pom.xml`
 
 ```xml
-<distributionManagement>
-    <snapshotRepository>
-        <id>ossrh</id>
-        <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-    </snapshotRepository>
-    <repository>
-        <id>ossrh</id>
-        <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-    </repository>
-</distributionManagement>
-```
-
-```xml
 <project>
     <build>
         <plugins>
