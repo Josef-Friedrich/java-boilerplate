@@ -1,3 +1,6 @@
+[![Maven Central](https://img.shields.io/maven-central/v/de.pirckheimer-gymnasium/engine-pi.svg?style=flat)](https://central.sonatype.com/artifact/de.pirckheimer-gymnasium/engine-pi)
+[![javadoc](https://javadoc.io/badge2/de.pirckheimer-gymnasium/engine-pi/javadoc.svg)](https://javadoc.io/doc/de.pirckheimer-gymnasium/engine-pi)
+
 # java-project-boilerplate
 
 Boilerplate code snippets for my java projects
@@ -268,33 +271,41 @@ https://github.com/simpligility/ossrh-demo
 <project>
     <build>
         <plugins>
+            <!-- https://maven.apache.org/plugins/maven-gpg-plugin/usage.html -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-gpg-plugin</artifactId>
                 <version>3.2.4</version>
                 <executions>
-                    <execution>
-                        <id>sign-artifacts</id>
-                        <phase>verify</phase>
-                        <goals>
-                            <goal>sign</goal>
-                        </goals>
-                    </execution>
+                <execution>
+                    <id>sign-artifacts</id>
+                    <phase>verify</phase>
+                    <goals>
+                    <goal>sign</goal>
+                    </goals>
+                    <configuration>
+                    <!-- This is necessary for gpg to not try to use the pinentry programs -->
+                    <gpgArguments>
+                        <arg>--pinentry-mode</arg>
+                        <arg>loopback</arg>
+                    </gpgArguments>
+                    </configuration>
+                </execution>
                 </executions>
             </plugin>
-                <!-- https://central.sonatype.org/publish/publish-portal-maven/ -->
-                <plugin>
-                    <groupId>org.sonatype.central</groupId>
-                    <artifactId>central-publishing-maven-plugin</artifactId>
-                    <version>0.5.0</version>
-                    <extensions>true</extensions>
-                    <configuration>
-                        <!-- see ~/.m2/settings.xml -->
-                        <publishingServerId>central</publishingServerId>
-                        <tokenAuth>true</tokenAuth>
-                        <autoPublish>true</autoPublish>
-                    </configuration>
-                </plugin>
+            <!-- https://central.sonatype.org/publish/publish-portal-maven/ -->
+            <plugin>
+                <groupId>org.sonatype.central</groupId>
+                <artifactId>central-publishing-maven-plugin</artifactId>
+                <version>0.5.0</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <!-- see ~/.m2/settings.xml -->
+                    <publishingServerId>central</publishingServerId>
+                    <tokenAuth>true</tokenAuth>
+                    <autoPublish>true</autoPublish>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 </project>
@@ -307,3 +318,58 @@ https://github.com/simpligility/ossrh-demo
 Multiline code snippets
 
 https://reflectoring.io/howto-format-code-snippets-in-javadoc/
+
+## versioning
+
+```xml
+<project>
+    <build>
+        <plugins>
+           <!-- https://www.mojohaus.org/versions/versions-maven-plugin/-->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>versions-maven-plugin</artifactId>
+                <version>2.17.1</version>
+        </plugins>
+    </build>
+</project>
+```
+
+`mvn versions:set`
+
+`mvn versions:set -DnewVersion=1.0.1-SNAPSHOT`
+
+`mvn versions:commit`
+
+## junit
+
+```xml
+<dependencyManagement>
+    <dependencies>
+        <dependency>
+        <groupId>org.junit</groupId>
+        <artifactId>junit-bom</artifactId>
+        <version>5.10.3</version>
+        <type>pom</type>
+        <scope>import</scope>
+        </dependency>
+    </dependencies>
+</dependencyManagement>
+
+<dependencies>
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter</artifactId>
+        <scope>test</scope>
+    </dependency>
+</dependencies>
+
+<build>
+    <plugins>
+        <plugin>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.3.1</version>
+        </plugin>
+    </plugins>
+</build>
+```
