@@ -74,8 +74,10 @@ https://code.revelc.net/formatter-maven-plugin/examples.html#custom-configuratio
 It is best to make or edit the XML formatter files in Eclipse: Window > Preferences > Java > Code Style > Formatter
 
 ```xml
+
 <build>
   <plugins>
+    <!-- https://code.revelc.net/formatter-maven-plugin/ -->
     <plugin>
       <groupId>net.revelc.code.formatter</groupId>
       <artifactId>formatter-maven-plugin</artifactId>
@@ -83,6 +85,39 @@ It is best to make or edit the XML formatter files in Eclipse: Window > Preferen
       <configuration>
         <configFile>${project.basedir}/.eclipse-formatter/school.xml</configFile>
       </configuration>
+    </plugin>
+  </plugins>
+</build>
+```
+
+
+```xml
+<build>
+  <plugins>
+    <!--
+    https://code.revelc.net/formatter-maven-plugin/
+    https://code.revelc.net/formatter-maven-plugin/examples.html#basic-configuration-using-external-resource -->
+    <plugin>
+        <groupId>net.revelc.code.formatter</groupId>
+        <artifactId>formatter-maven-plugin</artifactId>
+        <version>2.24.1</version>
+        <executions>
+            <execution>
+                <goals>
+                    <goal>format</goal>
+                </goals>
+                <configuration>
+                    <configFile>eclipse-formatter.xml</configFile>
+                </configuration>
+            </execution>
+        </executions>
+        <dependencies>
+            <dependency>
+                <groupId>de.pirckheimer-gymnasium</groupId>
+                <artifactId>engine-pi</artifactId>
+                <version>0.28.0</version>
+            </dependency>
+        </dependencies>
     </plugin>
   </plugins>
 </build>
