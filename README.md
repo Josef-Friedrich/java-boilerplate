@@ -51,8 +51,8 @@ control. For example
 
 ## artifactId
 
-is the __name of the jar__ without version. If you created it, then you can
-choose whatever name you want with __lowercase letters__ and no strange symbols.
+is the **name of the jar** without version. If you created it, then you can
+choose whatever name you want with **lowercase letters** and no strange symbols.
 
     eg. maven, commons-math
 
@@ -225,9 +225,7 @@ mvn com.xenoamess:remove-unused-imports-maven-plugin:0.0.6:process
 
 ```json
 {
-    "java.project.referencedLibraries": [
-        "+libs/**/*.jar"
-    ]
+  "java.project.referencedLibraries": ["+libs/**/*.jar"]
 }
 ```
 
@@ -324,11 +322,12 @@ https://reflectoring.io/howto-format-code-snippets-in-javadoc/
 <project>
     <build>
         <plugins>
-           <!-- https://www.mojohaus.org/versions/versions-maven-plugin/-->
+            <!-- https://www.mojohaus.org/versions/versions-maven-plugin/-->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>versions-maven-plugin</artifactId>
                 <version>2.17.1</version>
+            </plugin>
         </plugins>
     </build>
 </project>
