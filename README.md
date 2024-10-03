@@ -341,13 +341,17 @@ https://reflectoring.io/howto-format-code-snippets-in-javadoc/
 
 ## junit
 
+from the [junit5-jupiter-starter-maven project](https://github.com/junit-team/junit5-samples/blob/main/junit5-jupiter-starter-maven/pom.xml):
+
+`pom.xml`
+
 ```xml
 <dependencyManagement>
     <dependencies>
         <dependency>
         <groupId>org.junit</groupId>
         <artifactId>junit-bom</artifactId>
-        <version>5.10.3</version>
+        <version>5.11.1</version>
         <type>pom</type>
         <scope>import</scope>
         </dependency>
@@ -366,7 +370,7 @@ https://reflectoring.io/howto-format-code-snippets-in-javadoc/
     <plugins>
         <plugin>
         <artifactId>maven-surefire-plugin</artifactId>
-        <version>3.3.1</version>
+        <version>3.5.0</version>
         </plugin>
     </plugins>
 </build>
