@@ -37,8 +37,11 @@ package:
 	mvn package
 
 doc:
+	rm -rf target/reports/apidocs
 	mvn javadoc:javadoc
-	xdg-open target/site/apidocs/index.html
+	xdg-open target/reports/apidocs/index.html
+
+docs: doc
 
 test:
 	mvn clean

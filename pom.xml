@@ -87,8 +87,10 @@
           </archive>
         </configuration>
       </plugin>
+      <!-- Creates a jar archive of the source files of the current project. The jar file is, by
+        default, created in the project's target directory. -->
+      <!-- https://maven.apache.org/plugins/maven-source-plugin/ -->
       <plugin>
-        <!-- https://maven.apache.org/plugins/maven-source-plugin/ -->
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-source-plugin</artifactId>
         <version>3.3.1</version>
@@ -101,6 +103,7 @@
           </execution>
         </executions>
       </plugin>
+      <!-- Uses the Javadoc tool to generate javadocs for the specified project. -->
       <!-- https://maven.apache.org/plugins/maven-javadoc-plugin/ -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -109,7 +112,8 @@
         <configuration>
           <!-- https://maven.apache.org/plugins/maven-javadoc-plugin/javadoc-mojo.html#show -->
           <show>private</show>
-          <!-- https://maven.apache.org/plugins/maven-javadoc-plugin/javadoc-mojo.html#javadocexecutable -->
+          <!--
+          https://maven.apache.org/plugins/maven-javadoc-plugin/javadoc-mojo.html#javadocexecutable -->
           <javadocExecutable>${java.home}/bin/javadoc</javadocExecutable>
           <!-- https://maven.apache.org/plugins/maven-javadoc-plugin/javadoc-mojo.html#doclint -->
           <!-- to disable the "missing" warnings -->
@@ -177,6 +181,7 @@
           </execution>
         </executions>
       </plugin>
+      <!-- Signs all of a project's attached artifacts with GnuPG. -->
       <!-- https://maven.apache.org/plugins/maven-gpg-plugin/usage.html -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -232,7 +237,8 @@
         </configuration>
       </plugin>
 
-      <!-- https://code.revelc.net/formatters-maven-plugin/usage.html -->
+      <!-- Formatting java source code using the Eclipse code formatter. -->
+      <!-- https://code.revelc.net/formatter-maven-plugin/usage.html -->
       <plugin>
         <groupId>net.revelc.code.formatter</groupId>
         <artifactId>formatter-maven-plugin</artifactId>
