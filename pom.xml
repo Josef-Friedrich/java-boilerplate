@@ -105,8 +105,13 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-javadoc-plugin</artifactId>
-        <version>3.8.0</version>
+        <version>3.10.1</version>
         <configuration>
+          <!-- https://maven.apache.org/plugins/maven-javadoc-plugin/javadoc-mojo.html#show -->
+          <show>private</show>
+          <!-- https://maven.apache.org/plugins/maven-javadoc-plugin/javadoc-mojo.html#javadocexecutable -->
+          <javadocExecutable>${java.home}/bin/javadoc</javadocExecutable>
+          <!-- https://maven.apache.org/plugins/maven-javadoc-plugin/javadoc-mojo.html#doclint -->
           <!-- to disable the "missing" warnings -->
           <doclint>all,-missing</doclint>
 
@@ -119,6 +124,9 @@
           <!--
                     https://maven.apache.org/plugins/maven-javadoc-plugin/examples/stylesheet-configuration.html -->
           <stylesheetfile>javadoc-stylesheet.css</stylesheetfile>
+          <!-- https://maven.apache.org/plugins/maven-javadoc-plugin/javadoc-mojo.html#verbose -->
+          <!-- To disable verbose output for each class -->
+          <verbose>false</verbose>
         </configuration>
         <dependencies>
           <dependency>
