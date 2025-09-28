@@ -102,22 +102,22 @@ It is best to make or edit the XML formatter files in Eclipse: Window > Preferen
     <plugin>
         <groupId>net.revelc.code.formatter</groupId>
         <artifactId>formatter-maven-plugin</artifactId>
-        <version>2.24.1</version>
+        <version>2.29.0</version>
+        <configuration>
+            <configFile>eclipse-formatter.xml</configFile> <!-- engine-pi/src/main/resources/eclipse-formatter.xml -->
+        </configuration>
         <executions>
             <execution>
                 <goals>
                     <goal>format</goal>
                 </goals>
-                <configuration>
-                    <configFile>eclipse-formatter.xml</configFile>
-                </configuration>
             </execution>
         </executions>
         <dependencies>
             <dependency>
                 <groupId>de.pirckheimer-gymnasium</groupId>
                 <artifactId>engine-pi</artifactId>
-                <version>0.28.0</version>
+                <version>0.29.0</version>
             </dependency>
         </dependencies>
     </plugin>
