@@ -12,8 +12,7 @@ Boilerplate code snippets for my java projects
 `src/test/java` Test sources<br>
 `src/test/resources` Test resources
 
-<small>
-[Source](https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html)</small>
+<small>[Source](https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html)</small>
 
 ## pom.xml
 
