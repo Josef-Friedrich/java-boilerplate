@@ -36,12 +36,15 @@ mvn_install_local_repo:
 package:
 	mvn package
 
-doc:
+doc: clean install
 	rm -rf target/reports/apidocs
 	mvn javadoc:javadoc
 	xdg-open target/reports/apidocs/index.html
 
 docs: doc
+
+clean:
+	mvn clean
 
 test:
 	mvn clean
