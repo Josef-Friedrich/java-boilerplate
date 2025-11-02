@@ -299,7 +299,12 @@ https://github.com/simpligility/ossrh-demo
                     <!-- see ~/.m2/settings.xml -->
                     <publishingServerId>central</publishingServerId>
                     <tokenAuth>true</tokenAuth>
-                    <autoPublish>true</autoPublish>
+                    <autoPublish>true</autoPublish>4
+                    <!-- The plugin can ignore, or more specifically not add, components that have
+                    already been published in the past to the bundle that will be uploaded and
+                    published.
+                    https://central.sonatype.org/publish/publish-portal-maven/#ignorepublishedcomponents -->
+                    <ignorePublishedComponents>true</ignorePublishedComponents>
                 </configuration>
             </plugin>
         </plugins>
