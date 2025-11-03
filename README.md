@@ -400,3 +400,13 @@ from the [junit5-jupiter-starter-maven project](https://github.com/junit-team/ju
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 ```
+
+## maven multi module
+
+https://maven.apache.org/guides/mini/guide-multiple-modules.html
+
+https://maven.apache.org/plugins/maven-help-plugin/effective-pom-mojo.html
+
+```
+mvn help:effective-pom
+```
