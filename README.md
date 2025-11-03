@@ -410,3 +410,9 @@ https://maven.apache.org/plugins/maven-help-plugin/effective-pom-mojo.html
 ```
 mvn help:effective-pom
 ```
+
+or 
+
+```
+mvn help:effective-pom -Dverbose
+```
