@@ -322,6 +322,8 @@ https://reflectoring.io/howto-format-code-snippets-in-javadoc/
 
 ## versioning
 
+https://www.mojohaus.org/versions/versions-maven-plugin/
+
 ```xml
 <project>
     <build>
@@ -330,12 +332,14 @@ https://reflectoring.io/howto-format-code-snippets-in-javadoc/
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>versions-maven-plugin</artifactId>
-                <version>2.17.1</version>
+                <version>2.19.1</version>
             </plugin>
         </plugins>
     </build>
 </project>
 ```
+
+Interactively:
 
 `mvn versions:set`
 
