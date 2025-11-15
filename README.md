@@ -328,7 +328,7 @@ https://www.mojohaus.org/versions/versions-maven-plugin/
 <project>
     <build>
         <plugins>
-            <!-- https://www.mojohaus.org/versions/versions-maven-plugin/-->
+            <!-- https://www.mojohaus.org/versions/versions-maven-plugin/ -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>versions-maven-plugin</artifactId>
@@ -339,13 +339,29 @@ https://www.mojohaus.org/versions/versions-maven-plugin/
 </project>
 ```
 
+### set
+
+[versions:set](https://www.mojohaus.org/versions/versions-maven-plugin/set-mojo.html) can be used to set the project version from the command line.
+
 Interactively:
 
 `mvn versions:set`
 
 `mvn versions:set -DnewVersion=1.0.1-SNAPSHOT`
 
+`mvn versions:set -f modules/engine/pom.xml`
+
+### commit
+
 `mvn versions:commit`
+
+### display-dependency-updates
+
+[versions:display-dependency-updates](https://www.mojohaus.org/versions/versions-maven-plugin/display-dependency-updates-mojo.html) scans a project's dependencies and produces a report of those dependencies which have newer versions available.
+
+### display-plugin-updates
+
+[versions:display-plugin-updates](https://www.mojohaus.org/versions/versions-maven-plugin/display-plugin-updates-mojo.html) scans a project's plugins and produces a report of those plugins which have newer versions available, taking care of Maven version prerequisites.
 
 ## junit
 
@@ -415,7 +431,7 @@ https://maven.apache.org/plugins/maven-help-plugin/effective-pom-mojo.html
 mvn help:effective-pom
 ```
 
-or 
+or
 
 ```
 mvn help:effective-pom -Dverbose
