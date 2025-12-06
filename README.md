@@ -116,7 +116,7 @@ It is best to make or edit the XML formatter files in Eclipse: Window > Preferen
             <dependency>
                 <groupId>de.pirckheimer-gymnasium</groupId>
                 <artifactId>engine-pi-build-tools</artifactId>
-                <version>0.40.0</version>
+                <version>0.1.0</version>
             </dependency>
         </dependencies>
     </plugin>
