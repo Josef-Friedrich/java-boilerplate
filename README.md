@@ -103,7 +103,7 @@ It is best to make or edit the XML formatter files in Eclipse: Window > Preferen
         <artifactId>formatter-maven-plugin</artifactId>
         <version>2.29.0</version>
         <configuration>
-            <configFile>eclipse-formatter.xml</configFile> <!-- engine-pi/src/main/resources/eclipse-formatter.xml -->
+            <configFile>eclipse-formatter.xml</configFile> <!-- src/main/resources/eclipse-formatter.xml -->
         </configuration>
         <executions>
             <execution>
@@ -115,8 +115,8 @@ It is best to make or edit the XML formatter files in Eclipse: Window > Preferen
         <dependencies>
             <dependency>
                 <groupId>de.pirckheimer-gymnasium</groupId>
-                <artifactId>engine-pi</artifactId>
-                <version>0.29.0</version>
+                <artifactId>engine-pi-build-tools</artifactId>
+                <version>0.40.0</version>
             </dependency>
         </dependencies>
     </plugin>
