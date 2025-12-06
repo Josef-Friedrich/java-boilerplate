@@ -299,7 +299,7 @@ https://github.com/simpligility/ossrh-demo
                     <!-- see ~/.m2/settings.xml -->
                     <publishingServerId>central</publishingServerId>
                     <tokenAuth>true</tokenAuth>
-                    <autoPublish>true</autoPublish>4
+                    <autoPublish>true</autoPublish>
                     <!-- The plugin can ignore, or more specifically not add, components that have
                     already been published in the past to the bundle that will be uploaded and
                     published.
