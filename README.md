@@ -71,7 +71,7 @@ https://github.com/revelc/formatter-maven-plugin
 
 [DefaultCodeFormatterConstants](https://git.eclipse.org/c/jdt/eclipse.jdt.core.git/tree/org.eclipse.jdt.core/formatter/org/eclipse/jdt/core/formatter/DefaultCodeFormatterConstants.java)
 
-https://code.revelc.net/formatter-maven-plugin/examples.html#custom-configuration-file
+[Configuration examples of Maven formatter plugin](https://code.revelc.net/formatter-maven-plugin/examples.html#custom-configuration-file)
 
 It is best to make or edit the XML formatter files in Eclipse: Window > Preferences > Java > Code Style > Formatter
 
