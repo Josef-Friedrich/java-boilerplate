@@ -136,6 +136,13 @@ It is best to make or edit the XML formatter files in Eclipse: Window > Preferen
 
 [Comparsion of the different code formatters](https://jqno.nl/post/2024/08/24/why-are-there-no-decent-code-formatters-for-java/)
 
+Java → Code Style → Formatter → Edit → Off/On Tags
+
+```
+@formatter:off
+@formatter:on
+```
+
 ## Maven (JAR files) repository inside a project
 
 ```xml
