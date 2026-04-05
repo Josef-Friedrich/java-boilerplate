@@ -445,3 +445,28 @@ or
 ```
 mvn help:effective-pom -Dverbose
 ```
+
+## Maven Plugin to sort pom.xml
+
+```xml
+            <plugin>
+                <groupId>com.github.ekryd.sortpom</groupId>
+                <artifactId>sortpom-maven-plugin</artifactId>
+                <version>4.0.0</version>
+                <!-- https://github.com/Ekryd/sortpom/wiki/Recommended-configuration -->
+                <configuration>
+                    <!-- https://github.com/Ekryd/sortpom/wiki/Parameters -->
+                    <createBackupFile>false</createBackupFile>
+                    <sortProperties>true</sortProperties>
+                    <!-- <sortDependencies>scope,groupId,artifactId</sortDependencies> -->
+                    <nrOfIndentSpace>4</nrOfIndentSpace>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>sort</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+```
